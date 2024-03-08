@@ -1,9 +1,8 @@
 <?php
-    
 
 
-//const:
-// host : webpgsql.notes-de-cours.com
-// username : e0000000 (où 0000 est votre matricule)
-// database : db_e000000 (où 00000 est votre matricule)
-// mot de passe : e0000000 (où 00000 est votre matricule) 
+ define("DB_DRIVER", "pgsql");
+ define("DB_HOST", "webpgsql.notes-de-cours.com");
+ define("DB_USER", "e1649508");
+ define("DB_DATABASE", "db_e1649508");
+ define("DB_PASS", "e1649508");

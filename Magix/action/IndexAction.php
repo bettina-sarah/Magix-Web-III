@@ -8,7 +8,36 @@
         }
 
         protected function executeAction() {
+            $hasConnectionError = false;
 
-            return []; // ICI COMPACT VERS VUE INDEX.PHP!
-        }
+			if (isset($_POST["username"]) && isset($_POST["password"])){
+
+				$data = [];
+				$data["username"] = $_POST["username"];     //remplacé par $username … 
+				$data["password"] = $_POST["password"];
+
+				$result = parent::callAPI("signin", $data);     //(callapi de commonact)
+				//signin est sha1 - clé
+				var_dump($result);
+
+				if ($result == "INVALID_USERNAME_PASSWORD") {
+					$hasConnectionError = true;
+					echo("notlogged in");
+				}
+				else {
+					echo("logged in");
+
+					$_SESSION["visibility"] = CommonAction::$VISIBILITY_MEMBER;
+
+					$key = $result->key; 
+
+					$_SESSION["key"] = $key;
+
+					header("Location: lobby.php");
+					exit;
+				}
+        	}
+
+		return compact("hasConnectionError");
     }
+}

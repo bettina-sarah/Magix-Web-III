@@ -8,5 +8,5 @@
 	</head>
 	<body>
 		<header>
-			StackOhVurFlo, là où on répond à toutes vos questions!
+			MAGIX
 		</header>
