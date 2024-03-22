@@ -6,6 +6,7 @@ $data = $action->execute();
 
 $pageTitle = "MAGIX";
 $header = "indexHeader";
+$body = "indexBody";
 require_once("partial/header.php");
 ?>
 

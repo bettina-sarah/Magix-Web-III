@@ -5,12 +5,10 @@
 	<meta charset="UTF-8">
 	<title>MAGIX</title>
 	<link href="css/global.css" rel="stylesheet" />
-	<script>
-		//mon js
-	</script>
+	<script src="js/javascript.js"></script>
 </head>
 
-<body>
+<body id=<?= $body ?>> 
 	<header id=<?= $header ?>>
 		<?= $pageTitle ?>
 	</header>

@@ -58,8 +58,7 @@ abstract class CommonAction
 
     protected abstract function executeAction();
 
-    //************code prof api pour login */
-    /**
+    /************CONNECTER A L'API
      * data = ['key1' => 'value1', 'key2' => 'value2'];
      */
     protected function callAPI($service, $data)
